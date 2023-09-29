@@ -1,13 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-	background-color: var(--bg-color-dark, #000028);
 	background-image: url('../images/cover-image-dark.png');
+	background-color: var(--bg-color-dark, #000028);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	min-inline-size: 375px;
 }
 /*Меню*/
 .header {
@@ -16,13 +15,13 @@
 	grid-auto-flow: row;
 	min-height: 100vh;
 	position: relative;
+	padding: 20px;
 }
 
 .header__theme-menu {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 2.5vh 0vh 0vh 0vh;
 }
 
 .header__theme-menu-list {
@@ -42,6 +41,8 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: 82.5%;
+	right: 20px;
+	position: relative;
 }
 
 /*Параграф*/
@@ -49,7 +50,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	padding: 7.15rem 1.25rem;
+	padding: 114px 0px;
 }
 
 .text__content {
@@ -89,6 +90,8 @@
 }
 
 /*Уголки*/
+decorated-zone-header {
+}
 .decorated-zone::before {
 	content: '';
 	position: absolute;
@@ -96,7 +99,7 @@
 	border-left: 1px solid var(--accent-color, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
-	bottom: 21.6px;
+	bottom: 20px;
 	left: 20px;
 }
 
@@ -107,8 +110,8 @@
 	border-right: 1px solid var(--accent-color, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
-	top: 18.5px;
-	right: 20.5px;
+	top: 20px;
+	right: 20px;
 }
 
 /*Rec*/
@@ -297,15 +300,20 @@
 	grid-column: 2 / 4;
 }
 
+/*Футер*/
 .footer {
 	background-color: var(--bg-color-dark);
-	padding: 60px 20px;
-	justify-items: center;
-	align-items: center;
+	padding: 60px 20px 20px;
+	block-size: 100vh;
+	grid: inherit;
 }
 
 .footer__title {
 	text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: 0px;
 }
 
 .fo-zone::before {
@@ -315,7 +323,7 @@
 	border-left: 1px solid var(--accent-color, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
-	bottom: 21.6px;
+	bottom: 20px;
 	left: 20px;
 }
 
@@ -326,6 +334,6 @@
 	border-right: 1px solid var(--accent-color, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
-	top: 18.5px;
-	right: 20.5px;
+	top: 61px;
+	right: 20px;
 }
