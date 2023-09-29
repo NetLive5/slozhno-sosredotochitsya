@@ -2,12 +2,17 @@
 .page {
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 	background-image: url('../images/cover-image-dark.png');
-	background-color: var(--bg-color-dark, #000028);
+	background-color: var(--bg-color, #000028);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 }
+
+.header__theme-menu-button_active {
+	pointer-events: none;
+}
+
 /*Меню*/
 .header {
 	display: grid;
@@ -34,8 +39,8 @@
 
 /*Заголовок*/
 .header__title__text {
-	color: #db00ff;
-	text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+	color: var(--header-color);
+	text-shadow: 4px 4px 0 var(--text-shadow, #ff0070);
 	font-family: 'IBM Plex Mono';
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-style: normal;
@@ -50,27 +55,25 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	padding: 114px 0px;
+	padding: 114px 0px 116px 493px;
 }
 
 .text__content {
 	display: flex;
 	flex-wrap: wrap;
-	color: #000028;
+	color: var(--title-color, #000028);
 	font-family: 'IBM Plex Mono';
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 23.4px;
 	background-color: var(--accent-color, #ff0070);
-	width: 30.6875rem;
 	text-wrap: wrap;
-	height: 4.4375rem;
 }
 
 /*Кнопки*/
 .header__theme-menu-button {
-	color: var(--accent-color, #ff0070);
+	color: var(--decor, #ff0070);
 	text-align: center;
 	font-family: 'IBM Plex Mono';
 	font-size: 1.125rem;
@@ -86,17 +89,21 @@
 }
 
 .header__theme-menu-button:hover {
-	border: 1px solid var(--accent-color, #ff0070);
+	border: 1px solid var(--decor, #ff0070);
 }
 
-/*Уголки*/
-decorated-zone-header {
+.header__theme-menu-button:focus {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid var(--decor, #ff0070);
 }
+/*Уголки*/
+
 .decorated-zone::before {
 	content: '';
 	position: absolute;
-	border-bottom: 1px solid var(--accent-color, #ff0070);
-	border-left: 1px solid var(--accent-color, #ff0070);
+	border-bottom: 1px solid var(--decor, #ff0070);
+	border-left: 1px solid var(--decor, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
 	bottom: 20px;
@@ -106,8 +113,8 @@ decorated-zone-header {
 .decorated-zone::after {
 	content: '';
 	position: absolute;
-	border-top: 1px solid var(--accent-color, #ff0070);
-	border-right: 1px solid var(--accent-color, #ff0070);
+	border-top: 1px solid var(--decor, #ff0070);
+	border-right: 1px solid var(--decor, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
 	top: 20px;
@@ -145,18 +152,22 @@ decorated-zone-header {
 
 /*Первая секция */
 .section__content {
-	background-color: var(--bg-color-dark);
+	background-color: var(--bg-color, #000028);
 	display: grid;
 }
-
+/*Ссылка */
 .link {
 	text-decoration: none;
-	text-shadow: 1px 1px 0 var(--accent-color, #ff0070);
+	text-shadow: 1px 1px 0 var(--link, #ff0070);
 }
 
 .link:hover {
 	cursor: pointer;
 	text-decoration-line: underline;
+}
+
+.link:focus {
+	outline: 1px solid var(--text-color);
 }
 
 .section__content_fs {
@@ -178,8 +189,8 @@ decorated-zone-header {
 }
 
 .section__title {
-	color: #ff0070;
-	font-family: IBM Plex Mono;
+	color: var(--title-color-h3);
+	font-family: 'IBM Plex Mono';
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -187,7 +198,7 @@ decorated-zone-header {
 }
 
 .section__subtitle {
-	color: var(--bg-color-dark);
+	color: var(--title-color);
 	font-family: 'IBM Plex Mono';
 	font-size: 18px;
 	font-style: normal;
@@ -197,7 +208,7 @@ decorated-zone-header {
 }
 
 .section__paragraf {
-	color: var(--color-light);
+	color: var(--text-color);
 	font-family: 'IBM Plex Mono';
 	font-size: 18px;
 	font-style: normal;
@@ -302,14 +313,14 @@ decorated-zone-header {
 
 /*Футер*/
 .footer {
-	background-color: var(--bg-color-dark);
+	background-color: var(--bg-color);
 	padding: 60px 20px 20px;
 	block-size: 100vh;
 	grid: inherit;
 }
 
 .footer__title {
-	text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
+	text-shadow: 2px 2px 0 var(--text-shadow, #ff0070);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -319,8 +330,8 @@ decorated-zone-header {
 .fo-zone::before {
 	content: '';
 	position: absolute;
-	border-bottom: 1px solid var(--accent-color, #ff0070);
-	border-left: 1px solid var(--accent-color, #ff0070);
+	border-bottom: 1px solid var(--decor, #ff0070);
+	border-left: 1px solid var(--decor, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
 	bottom: 20px;
@@ -330,10 +341,69 @@ decorated-zone-header {
 .fo-zone::after {
 	content: '';
 	position: absolute;
-	border-top: 1px solid var(--accent-color, #ff0070);
-	border-right: 1px solid var(--accent-color, #ff0070);
+	border-top: 1px solid var(--decor, #ff0070);
+	border-right: 1px solid var(--decor, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
 	top: 61px;
 	right: 20px;
+}
+
+/*Планшет*/
+@media (768px <= width <= 800px) {
+	.header__theme-menu {
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	.header__theme-menu-list {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.text__block {
+		padding: 161px 0px 165px 362px;
+	}
+
+	.section__title {
+		padding: 0px 2px 0px 0px;
+	}
+
+	.section__content_fs {
+		gap: 20px;
+	}
+
+	.section__block_fs:not(:last-child) {
+		padding: 0px 0px 0px 0px;
+	}
+
+	.section__block {
+		gap: 9px;
+	}
+
+	.section__content_two {
+		grid-template-rows: min-content 1fr 1fr 1fr;
+		padding: 20px 20px;
+		grid-template-columns: 1fr;
+		gap: 0px;
+	}
+
+	.section__title_2 {
+		padding: 0px 500px 18px 0px;
+	}
+
+	.section__block_1 {
+		grid-row: 2;
+		grid-column: 1;
+	}
+	.section__block_2 {
+		grid-row: 3;
+		grid-column: 1;
+	}
+	.section__block_3 {
+		grid-row: 4;
+		grid-column: 1;
+	}
+	.section__content_thre {
+		gap: 20px;
+	}
 }

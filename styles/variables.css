@@ -4,8 +4,14 @@
 */
 
 :root {
-	--accent-color: #ff0070;
 	--color-light: #ff8dcb;
-	--bg-color-dark: #000028;
-	--font-size-18: 18px;
+	--header-color: #db00ff;
+	--bg-color: #000028;
+	--title-color: #000028;
+	--text-color: #f1b2ce;
+	--text-shadow: #ff0070;
+	--decor: #ff0070;
+	--title-color-h3: #ff0070;
+	--accent-color: #ff0070;
+	--link: #ff0070;
 }
