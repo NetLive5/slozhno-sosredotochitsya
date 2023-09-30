@@ -18,7 +18,7 @@
 	display: grid;
 	grid-template-rows: 1fr min-content 1fr;
 	grid-auto-flow: row;
-	min-height: 100vh;
+	min-block-size: 100vh;
 	position: relative;
 	padding: 20px;
 }
@@ -32,9 +32,7 @@
 .header__theme-menu-list {
 	display: flex;
 	list-style-type: none;
-	justify-content: center;
-	align-content: center;
-	gap: 0.62rem;
+	gap: 10px;
 }
 
 /*Заголовок*/
@@ -53,14 +51,13 @@
 /*Параграф*/
 .text__block {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: flex-end;
 	padding: 114px 0px 116px 493px;
+	min-width: 100%;
 }
 
 .text__content {
 	display: flex;
-	flex-wrap: wrap;
 	color: var(--title-color, #000028);
 	font-family: 'IBM Plex Mono';
 	font-size: 18px;
@@ -68,7 +65,6 @@
 	font-weight: 700;
 	line-height: 23.4px;
 	background-color: var(--accent-color, #ff0070);
-	text-wrap: wrap;
 }
 
 /*Кнопки*/
@@ -131,9 +127,6 @@
 	line-height: 25px;
 	position: absolute;
 	display: flex;
-	justify-self: end;
-	align-self: flex-start;
-	text-align: center;
 	gap: 5px;
 	top: 20.3px;
 	right: 21px;
@@ -154,7 +147,9 @@
 .section__content {
 	background-color: var(--bg-color, #000028);
 	display: grid;
+	padding: 60px 20px 20px;
 }
+
 /*Ссылка */
 .link {
 	text-decoration: none;
@@ -173,7 +168,6 @@
 .section__content_fs {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
-	padding: 60px 20px;
 }
 
 .section__block {
@@ -219,7 +213,6 @@
 /*Секция вторая */
 .section__content_two {
 	grid-template-columns: 1fr 1fr 1fr;
-	padding: 20px 20px;
 	gap: 20px;
 }
 
@@ -241,7 +234,6 @@
 /*Треться секция */
 .section__content_thre {
 	grid-template-columns: 1fr 2fr;
-	padding: 60px 20px;
 	gap: 10px;
 }
 
@@ -269,9 +261,10 @@
 }
 
 /*Cекция Галереи*/
+
 .section__galeria {
 	gap: 20px;
-	padding: 20px 20px;
+	padding: 60px 20px;
 }
 
 .content__img {
@@ -314,8 +307,6 @@
 /*Футер*/
 .footer {
 	background-color: var(--bg-color);
-	padding: 60px 20px 20px;
-	block-size: 100vh;
 	grid: inherit;
 }
 
@@ -345,12 +336,12 @@
 	border-right: 1px solid var(--decor, #ff0070);
 	inline-size: 25px;
 	block-size: 25px;
-	top: 61px;
+	top: 20px;
 	right: 20px;
 }
 
 /*Планшет*/
-@media (768px <= width <= 800px) {
+@media (width< 800px) {
 	.header__theme-menu {
 		flex-wrap: nowrap;
 		justify-content: flex-end;
@@ -405,5 +396,40 @@
 	}
 	.section__content_thre {
 		gap: 20px;
+	}
+}
+@media (width< 500px) {
+	.page {
+		max-width: 375px;
+	}
+
+	.header {
+		padding: 10px;
+	}
+	.decorated-zone::after {
+		top: 10px;
+		right: 10px;
+	}
+
+	.decorated-zone::before {
+		bottom: 30px;
+		left: 10px;
+	}
+
+	.header__title__text {
+		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+		bottom: 10px;
+		right: 0px;
+	}
+	.header__theme-menu {
+		max-width: 375px;
+		padding: 63px 0px 0px 0px;
+	}
+
+	.header__theme-menu-list {
+		justify-content: flex-start;
+	}
+	.text__block {
+		padding: 45px 0px 76px 0px;
 	}
 }
