@@ -1,6 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 	background-image: url('../images/cover-image-dark.png');
 	background-color: var(--bg-color, #000028);
 	background-repeat: no-repeat;
@@ -21,6 +19,7 @@
 	min-block-size: 100vh;
 	position: relative;
 	padding: 20px;
+	height: 100vh;
 }
 
 .header__theme-menu {
@@ -232,7 +231,7 @@
 }
 
 /*Треться секция */
-.section__content_thre {
+.section__content_three {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
 }
@@ -333,6 +332,9 @@
 		justify-content: center;
 	}
 
+	.header__title__text {
+		text-shadow: 4px 4px 0px var(--accent-color, #ff8dcb);
+	}
 	.text__block {
 		padding: 165px 0px 160px 364px;
 	}
@@ -384,12 +386,16 @@
 		grid-column: 1;
 	}
 
-	.section__content_thre {
+	.section__content_three {
 		gap: 20px;
 	}
 
 	.article_card {
 		gap: 17px;
+	}
+
+	.footer__title {
+		text-shadow: 2px 2px 0px var(--accent-color, #ff8dcb);
 	}
 }
 
@@ -408,13 +414,12 @@
 	}
 
 	.decorated-zone::before {
-		bottom: 30px;
+		bottom: 10px;
 		left: 10px;
 	}
 
 	.header__title__text {
 		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-		bottom: 10px;
 		right: 0px;
 	}
 	.header__theme-menu {
@@ -423,7 +428,7 @@
 	}
 
 	.section__content {
-		padding: 20px 10px 20px;
+		padding: 40px 10px 20px;
 	}
 
 	.header__theme-menu-list {
@@ -431,7 +436,7 @@
 	}
 
 	.text__block {
-		padding: 46px 0px 76px 0px;
+		padding: 56px 0px 55px 0px;
 	}
 
 	.section__content_fs {
@@ -450,11 +455,12 @@
 	.section__content_two {
 		grid-template-rows: 1fr;
 		gap: 20px;
+		padding: 20px 10px 30px;
 	}
 
-	.section__content_thre {
+	.section__content_three {
 		grid-template-columns: inherit;
-		padding: 30px 10px 20px;
+		padding: 20px 10px 30px;
 	}
 
 	.content__img:first-of-type {
@@ -466,6 +472,7 @@
 		grid-row: 2;
 		grid-column: inherit;
 	}
+
 	.article_card {
 		gap: 20px;
 	}
@@ -484,39 +491,14 @@
 		grid-row: 5;
 		grid-column: inherit;
 	}
+
 	.section__galeria {
 		gap: 10px;
-		padding: 30px 10px 40px 10px;
+		padding: 20px 10px 40px 10px;
 	}
 
 	.galeria {
 		display: grid;
 		gap: 10px;
-	}
-
-	.footer__title {
-		bottom: 0px;
-	}
-
-	.fo-zone::before {
-		content: '';
-		position: absolute;
-		border-bottom: 1px solid var(--decor, #ff0070);
-		border-left: 1px solid var(--decor, #ff0070);
-		inline-size: 25px;
-		block-size: 25px;
-		bottom: 10px;
-		left: 10px;
-	}
-
-	.fo-zone::after {
-		content: '';
-		position: absolute;
-		border-top: 1px solid var(--decor, #ff0070);
-		border-right: 1px solid var(--decor, #ff0070);
-		inline-size: 25px;
-		block-size: 25px;
-		top: 10px;
-		right: 10px;
 	}
 }

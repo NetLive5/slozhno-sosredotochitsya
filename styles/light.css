@@ -1,8 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 :root .theme_light {
 	--text-shadow: #ff0070;
 	--accent-color: #ff8dcb;
@@ -31,12 +26,12 @@
 		--decor: #353430;
 	}
 }
+
 .theme_light .header__decor_rec,
 .theme_light .header__decor_rec::before {
 	visibility: hidden;
 }
 
 .page.theme_light {
-	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 	background-image: url('../images/cover-image-light.png');
 }
