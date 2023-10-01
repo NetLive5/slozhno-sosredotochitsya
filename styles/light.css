@@ -10,6 +10,7 @@
 	--decorated-zone-color: #353430;
 	--title-color-h3: #353430;
 	--decor: #353430;
+	--hover: rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,12 +25,22 @@
 		--decorated-zone-color: #353430;
 		--title-color-h3: #353430;
 		--decor: #353430;
+		--hover: rgba(50, 49, 45, 0.4);
 	}
 }
 
 .theme_light .header__decor_rec,
 .theme_light .header__decor_rec::before {
 	visibility: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+	.dark_theme {
+		display: none;
+	}
+	.page {
+		background-image: url('../images/cover-image-light.png');
+	}
 }
 
 .page.theme_light {

@@ -79,7 +79,7 @@
 }
 
 .header__theme-menu-button:hover {
-	border: 1px solid var(--decor, #ff0070);
+	border: 1px solid var(--hover, rgba(255, 0, 112, 0.4));
 }
 
 .header__theme-menu-button:focus {
@@ -189,6 +189,11 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: 23.4px;
+	grid-column: span 3;
+}
+
+.section__title_why {
+	grid-column: span 1;
 }
 
 .section__subtitle {
@@ -216,6 +221,11 @@
 	gap: 20px;
 }
 
+.section__title_attention {
+	max-inline-size: 315px;
+	grid-column: span 3;
+}
+
 .section__block_multitasking {
 	grid-row: 2;
 	grid-column: 1;
@@ -235,6 +245,9 @@
 .section__content_goldfish {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
+}
+.section__title_goldfish {
+	grid-column: span 1;
 }
 
 .section__subtitle_card {
@@ -375,22 +388,24 @@
 	}
 
 	.section__title_attention {
-		padding: 0px 500px 18px 0px;
+		max-block-size: 70px;
+		max-inline-size: 236px;
+		margin: 0px 0px 17px 0px;
 	}
 
 	.section__block_multitasking {
 		grid-row: 2;
-		grid-column: 1;
+		grid-column: span 3;
 	}
 
 	.section__block_meal {
 		grid-row: 3;
-		grid-column: 1;
+		grid-column: span 3;
 	}
 
 	.section__block_gadgets {
 		grid-row: 4;
-		grid-column: 1;
+		grid-column: span 3;
 	}
 
 	.section__content_goldfish {
@@ -434,6 +449,7 @@
 		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 		right: 0px;
 	}
+
 	.header__theme-menu {
 		max-width: 375px;
 		align-items: center;
@@ -450,6 +466,11 @@
 	.section__content_focus {
 		grid-template-rows: 1fr;
 		grid-template-columns: inherit;
+		gap: 20px;
+	}
+
+	.section__block_focus:not(:last-child) {
+		padding: 0px;
 	}
 
 	.section__block {
@@ -458,6 +479,8 @@
 
 	.section__title_attention {
 		padding: 10px 0px 0px 0px;
+		max-inline-size: 355px;
+		margin: 0px;
 	}
 
 	.section__content_concentration {
@@ -466,9 +489,24 @@
 		padding: 20px 10px 30px;
 	}
 
+	.section__block_multitasking {
+		grid-row: 2;
+		grid-column: span 3;
+	}
+
+	.section__block_meal {
+		grid-row: 3;
+		grid-column: span 3;
+	}
+
+	.section__block_gadgets {
+		grid-row: 4;
+		grid-column: span 3;
+	}
 	.section__content_goldfish {
 		grid-template-columns: inherit;
 		padding: 20px 10px 30px;
+		gap: 20px;
 	}
 
 	.content__img:first-of-type {
