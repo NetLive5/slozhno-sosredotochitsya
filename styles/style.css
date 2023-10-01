@@ -47,13 +47,13 @@
 /*Параграф*/
 .text__content {
 	font-family: 'IBM Plex Mono', monospace;
-	display: flex;
 	color: var(--title-color, #000028);
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 23.4px;
 	background-color: var(--accent-color, #ff0070);
+	display: flex;
 	justify-self: self-end;
 	align-self: center;
 	max-block-size: 171px;
