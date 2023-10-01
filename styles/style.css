@@ -7,10 +7,6 @@
 	background-size: cover;
 }
 
-.header__theme-menu-button_active {
-	pointer-events: none;
-}
-
 /*Меню*/
 .header {
 	display: grid;
@@ -20,6 +16,7 @@
 	position: relative;
 	padding: 20px;
 	height: 100vh;
+	min-height: 668px;
 }
 
 .header__theme-menu {
@@ -38,7 +35,7 @@
 .header__title__text {
 	color: var(--header-color);
 	text-shadow: 4px 4px 0 var(--text-shadow, #ff0070);
-	font-family: 'IBM Plex Mono';
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-style: normal;
 	font-weight: 700;
@@ -48,29 +45,27 @@
 }
 
 /*Параграф*/
-.text__block {
-	display: flex;
-	justify-content: flex-end;
-	padding: 114px 0px 116px 493px;
-	min-width: 100%;
-}
-
 .text__content {
 	display: flex;
 	color: var(--title-color, #000028);
-	font-family: 'IBM Plex Mono';
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 23.4px;
 	background-color: var(--accent-color, #ff0070);
+	justify-self: self-end;
+	align-self: center;
+	max-block-size: 171px;
+	max-inline-size: 491px;
 }
 
 /*Кнопки*/
 .header__theme-menu-button {
 	color: var(--decor, #ff0070);
 	text-align: center;
-	font-family: 'IBM Plex Mono';
+	text-transform: lowercase;
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
@@ -78,9 +73,9 @@
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
-	height: 26px;
+	min-height: 26px;
 	padding: 0px 13px;
-	width: 70px;
+	min-width: 70px;
 }
 
 .header__theme-menu-button:hover {
@@ -92,6 +87,12 @@
 	outline: none;
 	border-bottom: 1px solid var(--decor, #ff0070);
 }
+
+.header__theme-menu-button_active {
+	border: 1px solid var(--decor, #ff0070);
+	pointer-events: none;
+}
+
 /*Уголки*/
 
 .decorated-zone::before {
@@ -120,7 +121,8 @@
 .header__decor_rec {
 	color: var(--accent-color, #ff0070);
 	font-size: 18px;
-	font-family: 'IBM Plex Mono';
+	text-transform: uppercase;
+	font-family: 'IBM Plex Mono', monospace;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 25px;
@@ -137,14 +139,13 @@
 	width: 9px;
 	height: 9px;
 	background-color: var(--accent-color, #ff0070);
-	filter: drop-shadow(0px 0px 4px #ff0070);
+	filter: drop-shadow(0px 0px 4px 2px #ff0070);
 	margin-inline: 5px 8px;
 	margin-block-start: 7.4px;
 }
 
 /*Первая секция */
 .section__content {
-	background-color: var(--bg-color, #000028);
 	display: grid;
 	padding: 60px 20px 20px;
 }
@@ -152,19 +153,19 @@
 /*Ссылка */
 .link {
 	text-decoration: none;
-	text-shadow: 1px 1px 0 var(--link, #ff0070);
+	text-shadow: 2px 2px 0 var(--link, #ff0070);
 }
 
 .link:hover {
 	cursor: pointer;
-	text-decoration-line: underline;
+	border-bottom: 2px solid var(--text-color, #ff0070);
 }
 
 .link:focus {
 	outline: 1px solid var(--text-color);
 }
 
-.section__content_fs {
+.section__content_focus {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
 }
@@ -177,13 +178,13 @@
 	grid-column: 2;
 }
 
-.section__block_fs:not(:last-child) {
+.section__block_focus:not(:last-child) {
 	padding: 0px 0px 11px 0px;
 }
 
 .section__title {
 	color: var(--title-color-h3);
-	font-family: 'IBM Plex Mono';
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -192,7 +193,7 @@
 
 .section__subtitle {
 	color: var(--title-color);
-	font-family: 'IBM Plex Mono';
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -202,7 +203,7 @@
 
 .section__paragraf {
 	color: var(--text-color);
-	font-family: 'IBM Plex Mono';
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -210,28 +211,28 @@
 }
 
 /*Секция вторая */
-.section__content_two {
+.section__content_concentration {
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
 }
 
-.section__block_1 {
+.section__block_multitasking {
 	grid-row: 2;
 	grid-column: 1;
 }
 
-.section__block_2 {
+.section__block_meal {
 	grid-row: 2;
 	grid-column: 2;
 }
 
-.section__block_3 {
+.section__block_gadgets {
 	grid-row: 2;
 	grid-column: 3;
 }
 
 /*Треться секция */
-.section__content_three {
+.section__content_goldfish {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
 }
@@ -269,6 +270,7 @@
 .content__img {
 	width: 100%;
 	height: 100%;
+	object-position: center;
 	object-fit: cover;
 }
 
@@ -305,16 +307,27 @@
 
 /*Футер*/
 .footer {
-	background-color: var(--bg-color);
-	grid: inherit;
+	display: grid;
+	grid-auto-flow: row;
+	min-block-size: 100vh;
+	position: relative;
+	padding: 20px;
+	height: 100vh;
+	min-height: 668px;
 }
 
 .footer__title {
+	color: var(--header-color);
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	text-shadow: 2px 2px 0 var(--text-shadow, #ff0070);
+	font-style: normal;
+	font-weight: 700;
+	line-height: 82.5%;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	right: 0px;
 }
 
 /*Планшет*/
@@ -323,8 +336,6 @@
 		flex-wrap: nowrap;
 		justify-content: flex-end;
 		flex-direction: row;
-		position: relative;
-		bottom: 2px;
 	}
 
 	.header__theme-menu-list {
@@ -335,24 +346,20 @@
 	.header__title__text {
 		text-shadow: 4px 4px 0px var(--accent-color, #ff8dcb);
 	}
-	.text__block {
-		padding: 165px 0px 160px 364px;
-	}
 
-	.header__decor_rec {
-		top: 3px;
-		right: 1px;
+	.text__content {
+		max-inline-size: 364px;
 	}
 
 	.section__title {
 		padding: 0px 2px 0px 0px;
 	}
 
-	.section__content_fs {
+	.section__content_focus {
 		gap: 20px;
 	}
 
-	.section__block_fs:not(:last-child) {
+	.section__block_focus:not(:last-child) {
 		padding: 0px 0px 0px 0px;
 	}
 
@@ -360,33 +367,33 @@
 		gap: 10px;
 	}
 
-	.section__content_two {
+	.section__content_concentration {
 		grid-template-rows: min-content 1fr 1fr 1fr;
 		padding: 60px 20px 20px;
 		grid-template-columns: 1fr;
 		gap: 0px;
 	}
 
-	.section__title_2 {
+	.section__title_attention {
 		padding: 0px 500px 18px 0px;
 	}
 
-	.section__block_1 {
+	.section__block_multitasking {
 		grid-row: 2;
 		grid-column: 1;
 	}
 
-	.section__block_2 {
+	.section__block_meal {
 		grid-row: 3;
 		grid-column: 1;
 	}
 
-	.section__block_3 {
+	.section__block_gadgets {
 		grid-row: 4;
 		grid-column: 1;
 	}
 
-	.section__content_three {
+	.section__content_goldfish {
 		gap: 20px;
 	}
 
@@ -408,6 +415,11 @@
 		padding: 10px;
 	}
 
+	.header__decor_rec {
+		top: 11px;
+		right: 11px;
+	}
+
 	.decorated-zone::after {
 		top: 10px;
 		right: 10px;
@@ -424,7 +436,7 @@
 	}
 	.header__theme-menu {
 		max-width: 375px;
-		padding: 66px 0px 0px 0px;
+		align-items: center;
 	}
 
 	.section__content {
@@ -435,11 +447,7 @@
 		justify-content: flex-start;
 	}
 
-	.text__block {
-		padding: 56px 0px 55px 0px;
-	}
-
-	.section__content_fs {
+	.section__content_focus {
 		grid-template-rows: 1fr;
 		grid-template-columns: inherit;
 	}
@@ -448,17 +456,17 @@
 		grid-column: 1;
 	}
 
-	.section__title_2 {
+	.section__title_attention {
 		padding: 10px 0px 0px 0px;
 	}
 
-	.section__content_two {
+	.section__content_concentration {
 		grid-template-rows: 1fr;
 		gap: 20px;
 		padding: 20px 10px 30px;
 	}
 
-	.section__content_three {
+	.section__content_goldfish {
 		grid-template-columns: inherit;
 		padding: 20px 10px 30px;
 	}
@@ -498,7 +506,14 @@
 	}
 
 	.galeria {
-		display: grid;
 		gap: 10px;
+	}
+
+	.footer {
+		justify-content: center;
+	}
+
+	.footer__title {
+		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	}
 }

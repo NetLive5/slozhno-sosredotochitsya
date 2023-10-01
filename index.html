@@ -5,27 +5,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="color-scheme" content="dark light" />
+		<link rel="stylesheet" href="./styles/globals.css" />
 		<link rel="stylesheet" href="./fonts/fonts.css" />
 		<link rel="stylesheet" href="./styles/variables.css" />
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/dark.css" />
 		<link rel="stylesheet" href="./styles/light.css" />
-		<link rel="stylesheet" href="./styles/globals.css" />
 		<link rel="icon" href="./images/favicon.ico" sizes="any" />
 		<link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
-		<link rel="mobile-touch-icon" href="./images/mobile-icon.png" />
+		<link rel="apple-touch-icon" href="./images/mobile-icon.png" />
 		<title>Сложно сосредоточиться</title>
 	</head>
 	<body class="page">
 		<header class="header decorated-zone">
+			<span class="header__decor_rec" aria-hidden="true"> rec </span>
 			<nav class="header__theme-menu">
-				<span class="header__decor_rec" aria-hidden="true"> REC </span>
 				<ul class="header__theme-menu-list">
 					<li class="header__theme-menu-item">
 						<button
 							class="header__theme-menu-button header__theme-menu-button_type_light"
 						>
-							день
+							День
 						</button>
 					</li>
 					<li class="header__theme-menu-item">
@@ -33,32 +33,29 @@
 							class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
 							disabled
 						>
-							авто
+							Авто
 						</button>
 					</li>
 					<li class="header__theme-menu-item">
 						<button
 							class="header__theme-menu-button header__theme-menu-button_type_dark"
 						>
-							неон
+							Неон
 						</button>
 					</li>
 				</ul>
 			</nav>
 			<h1 class="header__title__text">no focus</h1>
-			<div class="text__block">
-				<p class="text__content">
-					Что делать, когда не можешь делать ничего
-					<br />
-					Или почему нам так сложно сконцентрироваться, особенно когда очень
-					надо
-				</p>
-			</div>
+			<p class="text__content">
+				Что делать, когда не можешь делать ничего
+				<br />
+				Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+			</p>
 		</header>
 		<main>
-			<section class="section__content_fs section__content">
-				<h3 class="section__title">Почему сосредоточиться так сложно</h3>
-				<div class="section__block_fs section__block">
+			<section class="section__content_focus section__content">
+				<h2 class="section__title">Почему сосредоточиться так сложно</h2>
+				<div class="section__block_focus section__block">
 					<h3 class="section__subtitle">Многозадачность</h3>
 					<p class="section__paragraf">
 						Особенно сложно сосредоточиться, когда задач много и все они —
@@ -86,11 +83,11 @@
 					</p>
 				</div>
 			</section>
-			<section class="section__content_two section__content">
-				<h3 class="section__title_2 section__title">
+			<section class="section__content_concentration section__content">
+				<h3 class="section__title_attention section__title">
 					Что снижает концентрацию внимания?
 				</h3>
-				<div class="section__block_1 section__block">
+				<div class="section__block_multitasking section__block">
 					<h3 class="section__subtitle">Многозадачность</h3>
 					<p class="section__paragraf">
 						Как концентрация может снижаться из-за… концентрации? Любая
@@ -101,7 +98,7 @@
 						не давать ей отдохнуть.
 					</p>
 				</div>
-				<div class="section__block_2 section__block">
+				<div class="section__block_meal section__block">
 					<h3 class="section__subtitle">Еда</h3>
 					<p class="section__paragraf">
 						«Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -112,7 +109,7 @@
 						больше быстрых углеводов.
 					</p>
 				</div>
-				<div class="section__block_3 section__block">
+				<div class="section__block_gadgets section__block">
 					<h3 class="section__subtitle">Гаджеты</h3>
 					<p class="section__paragraf">
 						Да-да, это та самая ситуация, когда на экране ноутбука — код, в
@@ -125,20 +122,20 @@
 					</p>
 				</div>
 			</section>
-			<section class="section__content_three section__content">
-				<h3 class="section__title">
+			<section class="section__content_goldfish section__content">
+				<h2 class="section__title">
 					Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
 					секунд)
-				</h3>
-				<article class="article_card">
+				</h2>
+				<div class="article_card">
 					<h3 class="section__subtitle">
 						5 простых (на самом деле не очень) советов
 					</h3>
 					<ul class="component__card">
 						<li class="list__card">
-							<h3 class="section__subtitle_card section__subtitle">
+							<h4 class="section__subtitle_card section__subtitle">
 								Представьте небо и облака
-							</h3>
+							</h4>
 							<p class="section__paragraf">
 								Или листья в ручье. Тут дело в лёгкой медитации, которая
 								помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -197,46 +194,46 @@
 							</p>
 						</li>
 					</ul>
-				</article>
+				</div>
 			</section>
 			<section class="section__galeria section__content">
-				<h3 class="section__subtitle">А можно в картинках?</h3>
+				<h2 class="section__subtitle">А можно в картинках?</h2>
 				<div class="galeria">
 					<img
 						class="content__img"
 						src="./images/sunset.png"
-						alt=""
+						alt="sunset"
 						loading="lazy"
 					/>
 					<img
 						class="content__img"
 						src="./images/ice-cream.png"
-						alt=""
+						alt="ice-cream"
 						loading="lazy"
 					/>
 					<img
 						class="content__img"
 						src="./images/tape.png"
-						alt=""
+						alt="tape"
 						loading="lazy"
 					/>
 					<img
 						class="content__img"
 						src="./images/books.png"
-						alt=""
+						alt="books"
 						loading="lazy"
 					/>
 					<img
 						class="content__img"
 						src="./images/street.png"
-						alt=""
+						alt="street"
 						loading="lazy"
 					/>
 				</div>
 			</section>
 		</main>
-		<footer class="footer header decorated-zone">
-			<h2 class="footer__title header__title__text">focus</h2>
+		<footer class="footer decorated-zone">
+			<h2 class="footer__title">focus</h2>
 		</footer>
 		<script src="./scripts/script.js"></script>
 	</body>
