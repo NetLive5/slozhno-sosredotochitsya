@@ -390,7 +390,6 @@
 	.title_attention {
 		max-block-size: 70px;
 		max-inline-size: 236px;
-		margin: 0px 0px 17px 0px;
 		grid-column: inherit;
 	}
 
@@ -490,21 +489,6 @@
 		grid-template-rows: 1fr;
 		gap: 20px;
 		padding: 20px 10px 30px;
-	}
-
-	.block_multitasking {
-		grid-row: inherit;
-		grid-column: inherit;
-	}
-
-	.block_meal {
-		grid-row: inherit;
-		grid-column: inherit;
-	}
-
-	.block_gadgets {
-		grid-row: inherit;
-		grid-column: inherit;
 	}
 
 	.block_multitasking {
