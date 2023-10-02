@@ -53,17 +53,17 @@
 	font-weight: 700;
 	line-height: 23.4px;
 	background-color: var(--accent-color, #ff0070);
+	max-inline-size: 491px;
 	display: flex;
 	justify-self: self-end;
 	align-self: center;
-	max-block-size: 171px;
-	max-inline-size: 491px;
 }
 
 /*Кнопки*/
 .header__theme-menu-button {
 	color: var(--decor, #ff0070);
 	font-family: 'IBM Plex Mono', monospace;
+	text-align: center;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
@@ -72,7 +72,6 @@
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
-	text-align: center;
 	min-height: 26px;
 	padding: 0px 13px;
 	min-width: 70px;
@@ -554,4 +553,7 @@
 	.footer__title {
 		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	}
+}
+* {
+	outline: 1px solid yellow;
 }
