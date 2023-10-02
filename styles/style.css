@@ -33,9 +33,9 @@
 
 /*Заголовок*/
 .header__title__text {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--header-color);
 	text-shadow: 4px 4px 0 var(--text-shadow, #ff0070);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-style: normal;
 	font-weight: 700;
@@ -46,8 +46,8 @@
 
 /*Параграф*/
 .text__content {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--title-color, #000028);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -62,19 +62,19 @@
 
 /*Кнопки*/
 .header__theme-menu-button {
+	color: var(--decor, #ff0070);
 	font-family: 'IBM Plex Mono', monospace;
 	text-transform: lowercase;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.125rem;
-	color: var(--decor, #ff0070);
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
 	text-align: center;
-	min-height: 26px;
 	padding: 0px 13px;
+	min-height: 26px;
 	min-width: 70px;
 }
 
@@ -119,15 +119,15 @@
 
 /*Rec*/
 .header__decor_rec {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--accent-color, #ff0070);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 25px;
-	position: absolute;
 	display: flex;
+	position: absolute;
 	gap: 5px;
 	top: 20.3px;
 	right: 21px;
@@ -165,7 +165,7 @@
 	outline: 1px solid var(--text-color);
 }
 
-.section__content_focus {
+.focus {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
 }
@@ -178,13 +178,13 @@
 	grid-column: 2;
 }
 
-.section__block_focus:not(:last-child) {
+.focus:not(:last-child) {
 	padding: 0px 0px 11px 0px;
 }
 
 .section__title {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--title-color-h3);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -197,8 +197,8 @@
 }
 
 .section__subtitle {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--title-color);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 700;
@@ -207,8 +207,8 @@
 }
 
 .section__paragraf {
-	font-family: 'IBM Plex Mono', monospace;
 	color: var(--text-color);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: 400;
@@ -216,37 +216,37 @@
 }
 
 /*Секция вторая */
-.section__content_concentration {
+.concentration {
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
 }
 
-.section__title_attention {
+.attention {
 	max-inline-size: 315px;
 	grid-column: span 3;
 }
 
-.section__block_multitasking {
+.multitasking {
 	grid-row: 2;
 	grid-column: 1;
 }
 
-.section__block_meal {
+.meal {
 	grid-row: 2;
 	grid-column: 2;
 }
 
-.section__block_gadgets {
+.gadgets {
 	grid-row: 2;
 	grid-column: 3;
 }
 
 /*Треться секция */
-.section__content_goldfish {
+.goldfish {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
 }
-.section__title_goldfish {
+.title_goldfish {
 	grid-column: span 1;
 }
 
@@ -330,12 +330,12 @@
 }
 
 .footer__title {
+	color: var(--header-color);
 	font-family: 'IBM Plex Mono', monospace;
+	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-style: normal;
 	font-weight: 700;
 	line-height: 82.5%;
-	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-	color: var(--header-color);
 	text-shadow: 2px 2px 0 var(--text-shadow, #ff0070);
 	position: relative;
 	display: flex;
@@ -368,11 +368,11 @@
 		padding: 0px 2px 0px 0px;
 	}
 
-	.section__content_focus {
+	.focus {
 		gap: 20px;
 	}
 
-	.section__block_focus:not(:last-child) {
+	.focus:not(:last-child) {
 		padding: 0px 0px 0px 0px;
 	}
 
@@ -380,35 +380,35 @@
 		gap: 10px;
 	}
 
-	.section__content_concentration {
+	.concentration {
 		grid-template-rows: min-content 1fr 1fr 1fr;
 		padding: 60px 20px 20px;
 		grid-template-columns: 1fr;
 		gap: 0px;
 	}
 
-	.section__title_attention {
+	.attention {
 		max-block-size: 70px;
 		max-inline-size: 236px;
 		margin: 0px 0px 17px 0px;
 	}
 
-	.section__block_multitasking {
+	.multitasking {
 		grid-row: 2;
 		grid-column: span 3;
 	}
 
-	.section__block_meal {
+	.meal {
 		grid-row: 3;
 		grid-column: span 3;
 	}
 
-	.section__block_gadgets {
+	.gadgets {
 		grid-row: 4;
 		grid-column: span 3;
 	}
 
-	.section__content_goldfish {
+	.goldfish {
 		gap: 20px;
 	}
 
@@ -463,13 +463,13 @@
 		justify-content: flex-start;
 	}
 
-	.section__content_focus {
+	.focus {
 		grid-template-rows: 1fr;
 		grid-template-columns: inherit;
 		gap: 20px;
 	}
 
-	.section__block_focus:not(:last-child) {
+	.focus:not(:last-child) {
 		padding: 0px;
 	}
 
@@ -477,33 +477,33 @@
 		grid-column: 1;
 	}
 
-	.section__title_attention {
+	.attention {
 		padding: 10px 0px 0px 0px;
 		max-inline-size: 355px;
 		margin: 0px;
 	}
 
-	.section__content_concentration {
+	.concentration {
 		grid-template-rows: 1fr;
 		gap: 20px;
 		padding: 20px 10px 30px;
 	}
 
-	.section__block_multitasking {
+	.multitasking {
 		grid-row: 2;
 		grid-column: span 3;
 	}
 
-	.section__block_meal {
+	.meal {
 		grid-row: 3;
 		grid-column: span 3;
 	}
 
-	.section__block_gadgets {
+	.gadgets {
 		grid-row: 4;
 		grid-column: span 3;
 	}
-	.section__content_goldfish {
+	.goldfish {
 		grid-template-columns: inherit;
 		padding: 20px 10px 30px;
 		gap: 20px;
