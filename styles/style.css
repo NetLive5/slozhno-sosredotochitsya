@@ -34,8 +34,8 @@
 /*Заголовок*/
 .header__title__text {
 	color: var(--header-color);
-	font-family: 'IBM Plex Mono', monospace;
 	text-shadow: 4px 4px 0 var(--text-shadow, #ff0070);
+	font-family: 'IBM Plex Mono', monospace;
 	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	font-style: normal;
 	font-weight: 700;
@@ -62,13 +62,13 @@
 /*Кнопки*/
 .header__theme-menu-button {
 	color: var(--decor, #ff0070);
-	font-family: 'IBM Plex Mono', monospace;
 	text-align: center;
+	font-family: 'IBM Plex Mono', monospace;
+	text-transform: lowercase;
 	font-size: 1.125rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.125rem;
-	text-transform: lowercase;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -82,14 +82,14 @@
 }
 
 .header__theme-menu-button:focus {
-	border-bottom: 1px solid var(--decor, #ff0070);
 	border: none;
 	outline: none;
+	border-bottom: 1px solid var(--decor, #ff0070);
 }
 
 .header__theme-menu-button_active {
-	border: 1px solid var(--decor, #ff0070);
 	pointer-events: none;
+	border: 1px solid var(--decor, #ff0070);
 }
 
 /*Уголки*/
@@ -119,8 +119,8 @@
 /*Rec*/
 .header__decor_rec {
 	color: var(--accent-color, #ff0070);
-	font-family: 'IBM Plex Mono', monospace;
 	font-size: 18px;
+	font-family: 'IBM Plex Mono', monospace;
 	text-transform: uppercase;
 	font-style: normal;
 	font-weight: 400;
@@ -151,13 +151,13 @@
 
 /*Ссылка */
 .link {
-	text-shadow: 2px 2px 0 var(--link, #ff0070);
 	text-decoration: none;
+	text-shadow: 2px 2px 0 var(--link, #ff0070);
 }
 
 .link:hover {
-	border-bottom: 2px solid var(--text-color, #ff0070);
 	cursor: pointer;
+	border-bottom: 2px solid var(--text-color, #ff0070);
 }
 
 .link:focus {
@@ -553,7 +553,6 @@
 	.footer__title {
 		font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	}
-}
-* {
-	outline: 1px solid yellow;
+	.div1 {
+	}
 }
