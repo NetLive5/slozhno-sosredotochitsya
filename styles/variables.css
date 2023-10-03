@@ -6,8 +6,9 @@
 	--text-color: #f1b2ce;
 	--text-shadow: #ff0070;
 	--decor: #ff0070;
-	--title-color-h3: #ff0070;
+	--title-color-sub: #ff0070;
 	--accent-color: #ff0070;
 	--link: #ff0070;
-	--hover: rgba(255, 0, 112, 0.4);
+	--focus-color: #353430;
+	--hover: rgba(50, 49, 45, 0.4);
 }
