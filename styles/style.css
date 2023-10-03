@@ -394,7 +394,7 @@
 	}
 }
 
-@media (width< 500px) {
+@media (width<= 550px) {
 	.page {
 		max-width: 375px;
 	}
