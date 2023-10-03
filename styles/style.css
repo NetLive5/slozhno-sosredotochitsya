@@ -222,6 +222,7 @@
 	max-inline-size: 315px;
 	grid-column: span 3;
 }
+
 .block {
 	display: flex;
 }
