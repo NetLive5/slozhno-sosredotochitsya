@@ -12,6 +12,8 @@
 	--decor: #353430;
 	--focus-color: #353430;
 	--hover: rgba(50, 49, 45, 0.4);
+	background-image: url('../images/cover-image-light.png');
+	background-color: var(--bg-color, #fff1f7);
 }
 
 @media (prefers-color-scheme: light) {
@@ -51,9 +53,4 @@
 	.theme_light .header__decor_rec::before {
 		visibility: hidden;
 	}
-}
-
-.page.theme_light {
-	background-image: url('../images/cover-image-light.png');
-	background-color: var(--bg-color, #fff1f7);
 }
