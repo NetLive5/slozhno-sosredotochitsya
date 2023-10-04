@@ -1,4 +1,4 @@
-:root .theme_light {
+.page.theme_light {
 	--text-shadow: #ff0070;
 	--accent-color: #ff8dcb;
 	--section-color: #ff8dcb;
@@ -10,8 +10,8 @@
 	--decorated-zone-color: #353430;
 	--title-color-sub: #353430;
 	--decor: #353430;
-	--focus-color: #ff0070;
-	--hover: rgba(255, 0, 112, 0.4);
+	--focus-color: #353430;
+	--hover: rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,8 +27,8 @@
 		--decorated-zone-color: #353430;
 		--title-color-sub: #353430;
 		--decor: #353430;
-		--focus-color: #ff0070;
-		--hover: rgba(255, 0, 112, 0.4);
+		--focus-color: #353430;
+		--hover: rgba(50, 49, 45, 0.4);
 	}
 }
 

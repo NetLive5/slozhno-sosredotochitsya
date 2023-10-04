@@ -84,7 +84,6 @@
 	border: none;
 	outline: none;
 	border-bottom: 1px solid var(--focus-color, #353430);
-	color: var(--focus-color);
 }
 
 .header__theme-menu-button_active {
@@ -138,7 +137,7 @@
 	width: 9px;
 	height: 9px;
 	background-color: var(--accent-color, #ff0070);
-	box-shadow: 0 0 4px 2px (#ff0070);
+	box-shadow: 0 0 4px 2px #ff0070;
 	margin-inline: 5px 8px;
 	margin-block-start: 7.4px;
 }
@@ -211,11 +210,15 @@
 	margin-block-end: 20px;
 }
 
+.section__paragraf:last-child {
+	margin-block-end: initial;
+}
+
 /*Секция вторая */
 .content_concentration {
 	grid-template-columns: minmax(225px, 1fr) 1fr 1fr;
 	gap: 20px;
-	padding: 30px 20px 20px;
+	padding: 50px 20px 20px;
 }
 
 .title_attention {
@@ -231,7 +234,7 @@
 .content_goldfish {
 	grid-template-columns: 1fr 2fr;
 	gap: 10px;
-	padding: 40px 20px 20px;
+	padding: 60px 20px 20px;
 }
 .title_goldfish {
 	grid-column: span 1;
@@ -254,6 +257,7 @@
 .component__card {
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 }
 
 .list__card {
@@ -265,7 +269,7 @@
 
 .section__galeria {
 	gap: 10px;
-	padding: 40px 20px 60px;
+	padding: 60px 20px 60px;
 }
 
 .content__img {
@@ -356,30 +360,12 @@
 	}
 
 	.content_concentration {
-		padding: 30px 20px 20px;
 		grid-template-columns: minmax(236px, 1fr);
-		gap: inherit;
 	}
 
 	.title_attention {
 		max-inline-size: 236px;
 		grid-column: inherit;
-		margin-block-end: 20px;
-	}
-
-	.block_multitasking {
-		grid-row: 2;
-		grid-column: span 3;
-	}
-
-	.block_meal {
-		grid-row: 3;
-		grid-column: span 3;
-	}
-
-	.block_gadgets {
-		grid-row: 4;
-		grid-column: span 3;
 	}
 
 	.content_goldfish {
@@ -451,18 +437,16 @@
 		max-inline-size: none;
 		max-block-size: none;
 		grid-column: inherit;
-		margin-block-end: 20px;
 	}
 
 	.content_concentration {
 		grid-template-rows: 1fr;
-		gap: initial;
-		padding: 10px 10px 20px;
+		padding: 30px 10px 20px;
 	}
 
 	.content_goldfish {
 		grid-template-columns: inherit;
-		padding: 10px 10px 20px;
+		padding: 30px 10px 20px;
 	}
 
 	.content__img:first-of-type {
@@ -492,7 +476,7 @@
 
 	.section__galeria {
 		gap: initial;
-		padding: 10px 10px 40px 10px;
+		padding: 30px 10px 40px 10px;
 	}
 
 	.galeria {
