@@ -1,4 +1,6 @@
-:root.theme_dark {
+.page.theme_dark {
+	background-image: url('../images/cover-image-dark.png');
+	background-color: var(--bg-color, #000028);
 	--color-light: #ff8dcb;
 	--text-color: #f1b2ce;
 	--title-color: #000028;
@@ -18,23 +20,3 @@
 	visibility: visible;
 	display: flex;
 }
-
-.page.theme_dark {
-	background-image: url('../images/cover-image-dark.png');
-	background-color: var(--bg-color, #000028);
-	--color-light: #ff8dcb;
-	--text-color: #f1b2ce;
-	--title-color: #000028;
-	--bg-color: #000028;
-	--header-color: #db00ff;
-	--accent-color: #ff0070;
-	--title-color-sub: #ff0070;
-	--text-shadow: #ff0070;
-	--decor: #ff0070;
-	--link: #ff0070;
-	--focus-color: #ff0070;
-	--hover: rgba(255, 0, 112, 0.4);
-}
-
-/*
-*/

@@ -365,7 +365,7 @@
 
 	.title_attention {
 		max-inline-size: 236px;
-		grid-column: inherit;
+		grid-column: initial;
 	}
 
 	.content_goldfish {
